@@ -117,7 +117,7 @@ export default function HomePage() {
       </header>
 
       {/* Hero Section */}
-      <section className="relative z-20 text-center py-16 px-6">
+      <section className="relative z-20 text-center pt-10 pb-12 px-6">
         <motion.div
           initial={{ scale: 0.9, opacity: 0 }}
           animate={{ scale: 1, opacity: 1 }}
