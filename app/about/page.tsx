@@ -1,5 +1,5 @@
 "use client"
-
+import Image from"next/image"
 import { motion } from "framer-motion"
 import { BottomNavbar } from "@/components/bottom-navbar"
 import { CartSidebar } from "@/components/cart-sidebar"
@@ -30,16 +30,10 @@ export default function AboutPage() {
           transition={{ duration: 0.8, ease: "easeOut" }}
           className="flex items-center space-x-3"
         >
-          <motion.div
-            className="w-12 h-12 bg-gradient-to-br from-[var(--olive-green)] to-[var(--dark-charcoal)] rounded-full flex items-center justify-center text-2xl border-2 border-[var(--medium-gray)] pulse-glow"
-            whileHover={{ rotate: 360 }}
-            transition={{ duration: 0.6 }}
-          >
-            🍩
-          </motion.div>
+          <Image src="/dlogo.jpg" alt="logo" width={100} height={100} ></Image>
           <div>
-            <h1 className="font-dancing text-2xl text-accent main-heading-glow">Doughniverse</h1>
-            <p className="text-body text-sm text-secondary">About Us</p>
+            <h1 className="font-dancing text-2xl text-accent main-heading-glow">About Us</h1>
+            <p className="text-body text-sm text-secondary">Know More</p>
           </div>
         </motion.div>
       </header>
