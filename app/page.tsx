@@ -8,6 +8,7 @@ import { RefinedBackground } from "@/components/refined-background"
 import { useCart } from "@/components/cart-provider"
 import { Card, CardContent } from "@/components/ui/card"
 import { MapPin, Clock, MessageSquare } from "lucide-react"
+import Image from"next/image"
 
 const desserts = [
   {
@@ -15,7 +16,7 @@ const desserts = [
     name: "Classic Bomboloni",
     price: 120,
     category: "Bombolonis",
-    image: "/placeholder.svg?height=200&width=200",
+    image: "/cb.jpeg",
     description: "Fluffy Italian donuts filled with vanilla cream",
   },
   {
@@ -23,7 +24,7 @@ const desserts = [
     name: "Chocolate Tubcake",
     price: 150,
     category: "Tubcakes",
-    image: "/placeholder.svg?height=200&width=200",
+    image: "ctc.jpeg",
     description: "Rich chocolate cake in a tube shape",
   },
   {
@@ -31,7 +32,7 @@ const desserts = [
     name: "Strawberry Cheesecake",
     price: 180,
     category: "Cheesecakes",
-    image: "/placeholder.svg?height=200&width=200",
+    image: "/sc.jpeg",
     description: "Creamy cheesecake with fresh strawberry topping",
   },
   {
@@ -39,7 +40,7 @@ const desserts = [
     name: "Nutella Bomboloni",
     price: 140,
     category: "Bombolonis",
-    image: "/placeholder.svg?height=200&width=200",
+    image: "/nb.jpeg",
     description: "Italian donuts filled with rich Nutella",
   },
   {
@@ -47,7 +48,7 @@ const desserts = [
     name: "Red Velvet Tubcake",
     price: 160,
     category: "Tubcakes",
-    image: "/placeholder.svg?height=200&width=200",
+    image: "/rvtc.jpeg",
     description: "Classic red velvet in our signature tube shape",
   },
   {
@@ -55,7 +56,7 @@ const desserts = [
     name: "Blueberry Cheesecake",
     price: 190,
     category: "Cheesecakes",
-    image: "/placeholder.svg?height=200&width=200",
+    image: "/bc.jpeg",
     description: "Smooth cheesecake topped with fresh blueberries",
   },
   {
@@ -63,7 +64,7 @@ const desserts = [
     name: "Caramel Bomboloni",
     price: 130,
     category: "Bombolonis",
-    image: "/placeholder.svg?height=200&width=200",
+    image: "/cb.jpeg",
     description: "Sweet bomboloni filled with salted caramel",
   },
   {
@@ -71,7 +72,7 @@ const desserts = [
     name: "Vanilla Tubcake",
     price: 140,
     category: "Tubcakes",
-    image: "/placeholder.svg?height=200&width=200",
+    image: "/ctc.jpeg",
     description: "Classic vanilla cake with smooth frosting",
   },
 ]
@@ -107,16 +108,10 @@ export default function HomePage() {
           transition={{ duration: 0.8, ease: "easeOut" }}
           className="flex items-center space-x-3"
         >
-          <motion.div
-            className="w-12 h-12 bg-gradient-to-br from-[var(--olive-green)] to-[var(--dark-charcoal)] rounded-full flex items-center justify-center text-2xl border-2 border-[var(--medium-gray)] pulse-glow"
-            whileHover={{ rotate: 360 }}
-            transition={{ duration: 0.6 }}
-          >
-            🍩
-          </motion.div>
+        <Image src="/dlogo.jpg" alt="logo" width={100} height={100} ></Image>
           <div>
-            <h1 className="font-dancing text-3xl text-accent main-heading-glow">Doughniverse</h1>
-            <p className="font-poppins text-sm text-secondary font-medium">Varanasi Dessert Shop</p>
+            <h1 className="font-dancing text-3xl text-accent main-heading-glow">Dessert Shop</h1>
+            <p className="font-poppins text-sm text-secondary font-medium">Sigra, Varanasi</p>
           </div>
         </motion.div>
       </header>

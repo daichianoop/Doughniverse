@@ -27,9 +27,9 @@ const merriweather = Merriweather({
 })
 
 export const metadata: Metadata = {
-  title: "Doughniverse - Eggless.Exclusive.Epic | Varanasi Dessert Shop",
+  title: "Doughniverse - Ultimate Dessert Destination",
   description: "Bombolonis, Tubcakes, Cheesecakes & More. WhatsApp Orders Only | 11AM–9PM | Delivery/Takeaway",
-    generator: 'v0.dev'
+    generator: 'Anoop kumar'
 }
 
 export default function RootLayout({
