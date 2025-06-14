@@ -8,7 +8,7 @@ import { RefinedBackground } from "@/components/refined-background"
 import { useCart } from "@/components/cart-provider"
 import { Card, CardContent } from "@/components/ui/card"
 import { MapPin, Clock, MessageSquare } from "lucide-react"
-import Image from"next/image"
+import Image from "next/image"
 
 const desserts = [
   {
@@ -108,7 +108,7 @@ export default function HomePage() {
           transition={{ duration: 0.8, ease: "easeOut" }}
           className="flex items-center space-x-3"
         >
-        <Image src="/dlogo.jpg" alt="logo" width={100} height={100} ></Image>
+          <Image src="/dlogo.jpg" alt="logo" width={100} height={100}></Image>
           <div>
             <h1 className="font-dancing text-3xl text-accent main-heading-glow">Dessert Shop</h1>
             <p className="font-poppins text-sm text-secondary font-medium">Sigra, Varanasi</p>
@@ -122,14 +122,14 @@ export default function HomePage() {
           initial={{ scale: 0.9, opacity: 0 }}
           animate={{ scale: 1, opacity: 1 }}
           transition={{ duration: 1.2, ease: "easeOut" }}
-          className="hero-gradient p-12 max-w-4xl mx-auto float-animation"
+          className="hero-gradient p-6 sm:p-8 md:p-12 max-w-4xl mx-auto float-animation"
         >
           {/* Main Title */}
           <motion.h1
             initial={{ y: 50, opacity: 0 }}
             animate={{ y: 0, opacity: 1 }}
             transition={{ delay: 0.3, duration: 1, ease: "easeOut" }}
-            className="text-5xl md:text-7xl heading-primary text-accent main-heading-glow mb-8"
+            className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl heading-primary text-accent main-heading-glow mb-8"
           >
             DOUGHNIVERSE
           </motion.h1>
@@ -141,7 +141,7 @@ export default function HomePage() {
             transition={{ delay: 0.6, duration: 0.8, ease: "easeOut" }}
             className="mb-8"
           >
-            <div className="flex flex-wrap justify-center gap-6 mb-6">
+            <div className="flex flex-wrap justify-center gap-3 sm:gap-4 md:gap-6 mb-6">
               {["Eggless", "Exclusive", "Epic"].map((word, index) => (
                 <motion.div
                   key={word}
@@ -153,12 +153,10 @@ export default function HomePage() {
                     stiffness: 200,
                   }}
                   whileHover={{ scale: 1.05, rotate: 2 }}
-                  className="relative cursor-pointer group"
+                  className="bg-[var(--cream-yellow)] border-2 sm:border-4 border-[var(--dark-charcoal)] px-4 sm:px-6 md:px-8 py-2 sm:py-3 md:py-4 font-poppins font-black text-base sm:text-lg md:text-xl text-[var(--dark-charcoal)] transform rotate-1 group-hover:rotate-0 transition-all duration-300 shadow-[4px_4px_0px_var(--olive-green)] sm:shadow-[6px_6px_0px_var(--olive-green)] group-hover:shadow-[6px_6px_0px_var(--olive-green)] sm:group-hover:shadow-[8px_8px_0px_var(--olive-green)]"
                 >
-                  <div className="bg-[var(--cream-yellow)] border-4 border-[var(--dark-charcoal)] px-8 py-4 font-poppins font-black text-xl text-[var(--dark-charcoal)] transform rotate-1 group-hover:rotate-0 transition-all duration-300 shadow-[6px_6px_0px_var(--olive-green)] group-hover:shadow-[8px_8px_0px_var(--olive-green)]">
-                    {word}
-                  </div>
-                  <div className="absolute inset-0 bg-[var(--olive-green)] border-4 border-[var(--dark-charcoal)] px-8 py-4 -z-10 transform translate-x-1 translate-y-1"></div>
+                  {word}
+                  <div className="absolute inset-0 bg-[var(--olive-green)] border-2 sm:border-4 border-[var(--dark-charcoal)] px-4 sm:px-6 md:px-8 py-2 sm:py-3 md:py-4 -z-10 transform translate-x-1 translate-y-1"></div>
                 </motion.div>
               ))}
             </div>
@@ -166,7 +164,7 @@ export default function HomePage() {
               initial={{ y: 20, opacity: 0 }}
               animate={{ y: 0, opacity: 1 }}
               transition={{ delay: 1.5, duration: 0.8, ease: "easeOut" }}
-              className="text-xl text-primary text-accent-script"
+              className="text-lg sm:text-xl text-primary text-accent-script px-4"
             >
               Crafting Sweet Memories, One Bite at a Time
             </motion.p>
