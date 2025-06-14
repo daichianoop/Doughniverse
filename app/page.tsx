@@ -122,7 +122,7 @@ export default function HomePage() {
           initial={{ scale: 0.9, opacity: 0 }}
           animate={{ scale: 1, opacity: 1 }}
           transition={{ duration: 1.2, ease: "easeOut" }}
-          className="hero-gradient p-6 sm:p-8 md:p-12 max-w-4xl mx-auto float-animation"
+          className="p-6 sm:p-8 md:p-12 max-w-4xl mx-auto float-animation"
         >
           {/* Main Title */}
           <motion.h1
