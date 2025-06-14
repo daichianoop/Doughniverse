@@ -1,0 +1,252 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --dark-charcoal: #2a2a2b;
+  --cream-yellow: #fbf3ac;
+  --light-gray: #f3f3f3;
+  --medium-gray: #cbcbbf;
+  --olive-green: #84845c;
+  --pale-yellow: #e5dc9c;
+  --text-primary: #2a2a2b;
+  --text-secondary: #84845c;
+  --text-accent: #84845c;
+  --font-playfair: "Playfair Display";
+  --font-poppins: "Poppins";
+  --font-dancing: "Dancing Script";
+  --font-merriweather: "Merriweather";
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  overflow-x: hidden;
+  color: var(--text-primary);
+  background: var(--light-gray);
+}
+
+/* Hide scrollbar */
+::-webkit-scrollbar {
+  display: none;
+}
+
+html {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+
+/* Custom fonts */
+.font-playfair {
+  font-family: var(--font-playfair), serif;
+}
+
+.font-poppins {
+  font-family: var(--font-poppins), sans-serif;
+}
+
+.font-dancing {
+  font-family: var(--font-dancing), cursive;
+}
+
+.font-merriweather {
+  font-family: var(--font-merriweather), serif;
+}
+
+/* Refined glow effects */
+.price-glow {
+  color: var(--olive-green);
+  font-weight: 700;
+  text-shadow: 0 0 8px rgba(132, 132, 92, 0.3);
+}
+
+.main-heading-glow {
+  color: var(--dark-charcoal);
+  text-shadow: 0 0 12px rgba(42, 42, 43, 0.2);
+}
+
+/* Minimal neobrutalism card styles */
+.modern-card {
+  background: linear-gradient(135deg, var(--light-gray), #ffffff);
+  border: 2px solid var(--medium-gray);
+  border-radius: 12px;
+  box-shadow: 3px 3px 0px var(--olive-green);
+  transition: all 0.3s ease;
+}
+
+.modern-card:hover {
+  transform: translate(-2px, -2px);
+  box-shadow: 5px 5px 0px var(--olive-green);
+  border-color: var(--dark-charcoal);
+}
+
+/* Smooth transitions */
+.smooth-transition {
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+/* Modern button styles with minimal neobrutalism */
+.modern-button {
+  background: linear-gradient(135deg, var(--olive-green), var(--dark-charcoal));
+  border: 2px solid var(--dark-charcoal);
+  color: white;
+  font-weight: 600;
+  border-radius: 8px;
+  transition: all 0.3s ease;
+  box-shadow: 2px 2px 0px var(--medium-gray);
+}
+
+.modern-button:hover {
+  background: linear-gradient(135deg, var(--dark-charcoal), var(--olive-green));
+  transform: translate(-1px, -1px);
+  box-shadow: 3px 3px 0px var(--medium-gray);
+}
+
+/* Text improvements */
+.text-primary {
+  color: var(--text-primary);
+}
+
+.text-secondary {
+  color: var(--text-secondary);
+}
+
+.text-accent {
+  color: var(--text-accent);
+  font-weight: 600;
+}
+
+/* Hero section improvements */
+.hero-gradient {
+  background: linear-gradient(135deg, var(--cream-yellow) 0%, var(--pale-yellow) 50%, var(--light-gray) 100%);
+  border: 2px solid var(--medium-gray);
+  border-radius: 20px;
+  box-shadow: 4px 4px 0px var(--olive-green);
+}
+
+/* Professional typography improvements */
+.heading-primary {
+  font-family: var(--font-playfair);
+  font-weight: 800;
+  letter-spacing: -0.02em;
+  color: var(--dark-charcoal);
+}
+
+.heading-secondary {
+  font-family: var(--font-playfair);
+  font-weight: 600;
+  letter-spacing: -0.01em;
+  color: var(--dark-charcoal);
+}
+
+.text-body {
+  font-family: var(--font-poppins);
+  font-weight: 400;
+  line-height: 1.6;
+  color: var(--text-primary);
+}
+
+.text-accent-script {
+  font-family: var(--font-dancing);
+  font-weight: 600;
+  color: var(--olive-green);
+}
+
+.text-elegant {
+  font-family: var(--font-merriweather);
+  font-weight: 400;
+  line-height: 1.7;
+  color: var(--text-primary);
+}
+
+/* Enhanced animations */
+@keyframes float {
+  0%,
+  100% {
+    transform: translateY(0px);
+  }
+  50% {
+    transform: translateY(-15px);
+  }
+}
+
+@keyframes pulse-glow {
+  0%,
+  100% {
+    box-shadow: 0 0 15px rgba(132, 132, 92, 0.3);
+  }
+  50% {
+    box-shadow: 0 0 25px rgba(132, 132, 92, 0.5);
+  }
+}
+
+.float-animation {
+  animation: float 6s ease-in-out infinite;
+}
+
+.pulse-glow {
+  animation: pulse-glow 3s ease-in-out infinite;
+}
+
+/* Gradient backgrounds */
+.bg-gradient-radial {
+  background: radial-gradient(circle, var(--cream-yellow) 0%, var(--pale-yellow) 50%, var(--light-gray) 100%);
+}
+
+/* Tag styles with minimal neobrutalism */
+.modern-tag {
+  background: var(--cream-yellow);
+  color: var(--dark-charcoal);
+  border: 2px solid var(--dark-charcoal);
+  border-radius: 16px;
+  font-weight: 600;
+  transition: all 0.3s ease;
+  box-shadow: 2px 2px 0px var(--olive-green);
+}
+
+.modern-tag:hover {
+  background: var(--pale-yellow);
+  transform: translate(-1px, -1px);
+  box-shadow: 3px 3px 0px var(--olive-green);
+}
+
+/* Navigation styles */
+.nav-button {
+  background: var(--olive-green);
+  color: white;
+  border: 2px solid var(--dark-charcoal);
+  border-radius: 8px;
+  transition: all 0.3s ease;
+  box-shadow: 2px 2px 0px var(--medium-gray);
+}
+
+.nav-button:hover {
+  background: var(--dark-charcoal);
+  transform: translate(-1px, -1px);
+  box-shadow: 3px 3px 0px var(--medium-gray);
+}
+
+.nav-button.active {
+  background: var(--cream-yellow);
+  color: var(--dark-charcoal);
+  border-color: var(--olive-green);
+}
+
+/* Footer text visibility */
+.footer-text {
+  color: #ffffff !important;
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
+}
+
+.footer-accent {
+  color: var(--cream-yellow) !important;
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
+}
