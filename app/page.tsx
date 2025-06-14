@@ -8,6 +8,7 @@ import { RefinedBackground } from "@/components/refined-background"
 import { useCart } from "@/components/cart-provider"
 import { Card, CardContent } from "@/components/ui/card"
 import { MapPin, Clock, MessageSquare } from "lucide-react"
+import Image from"next/image"
 
 const desserts = [
   {
@@ -107,13 +108,7 @@ export default function HomePage() {
           transition={{ duration: 0.8, ease: "easeOut" }}
           className="flex items-center space-x-3"
         >
-          <motion.div
-            className="w-12 h-12 bg-gradient-to-br from-[var(--olive-green)] to-[var(--dark-charcoal)] rounded-full flex items-center justify-center text-2xl border-2 border-[var(--medium-gray)] pulse-glow"
-            whileHover={{ rotate: 360 }}
-            transition={{ duration: 0.6 }}
-          >
-            🍩
-          </motion.div>
+        <Image src="/dlogo.jpg" alt="logo" width={100} height={100} ></Image>
           <div>
             <h1 className="font-dancing text-3xl text-accent main-heading-glow">Doughniverse</h1>
             <p className="font-poppins text-sm text-secondary font-medium">Varanasi Dessert Shop</p>
