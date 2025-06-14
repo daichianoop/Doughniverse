@@ -110,8 +110,8 @@ export default function HomePage() {
         >
         <Image src="/dlogo.jpg" alt="logo" width={100} height={100} ></Image>
           <div>
-            <h1 className="font-dancing text-3xl text-accent main-heading-glow">Doughniverse</h1>
-            <p className="font-poppins text-sm text-secondary font-medium">Varanasi Dessert Shop</p>
+            <h1 className="font-dancing text-3xl text-accent main-heading-glow">Dessert Shop</h1>
+            <p className="font-poppins text-sm text-secondary font-medium">Sigra, Varanasi</p>
           </div>
         </motion.div>
       </header>
