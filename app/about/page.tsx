@@ -32,8 +32,8 @@ export default function AboutPage() {
         >
           <Image src="/dlogo.jpg" alt="logo" width={100} height={100} ></Image>
           <div>
-            <h1 className="font-dancing text-2xl text-accent main-heading-glow">About Us</h1>
-            <p className="text-body text-sm text-secondary">Know More</p>
+            <h1 className="font-dancing text-2xl text-accent main-heading-glow">Dessert Shop</h1>
+            <p className="text-body text-sm text-secondary">About Us</p>
           </div>
         </motion.div>
       </header>
