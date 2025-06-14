@@ -15,7 +15,7 @@ const desserts = [
     name: "Classic Bomboloni",
     price: 120,
     category: "Bombolonis",
-    image: "/placeholder.svg?height=200&width=200",
+    image: "/cb.jpeg",
     description: "Fluffy Italian donuts filled with vanilla cream",
   },
   {
@@ -23,7 +23,7 @@ const desserts = [
     name: "Chocolate Tubcake",
     price: 150,
     category: "Tubcakes",
-    image: "/placeholder.svg?height=200&width=200",
+    image: "ctc.jpeg",
     description: "Rich chocolate cake in a tube shape",
   },
   {
@@ -31,7 +31,7 @@ const desserts = [
     name: "Strawberry Cheesecake",
     price: 180,
     category: "Cheesecakes",
-    image: "/placeholder.svg?height=200&width=200",
+    image: "/sc.jpeg",
     description: "Creamy cheesecake with fresh strawberry topping",
   },
   {
@@ -39,7 +39,7 @@ const desserts = [
     name: "Nutella Bomboloni",
     price: 140,
     category: "Bombolonis",
-    image: "/placeholder.svg?height=200&width=200",
+    image: "/nb.jpeg",
     description: "Italian donuts filled with rich Nutella",
   },
   {
@@ -47,7 +47,7 @@ const desserts = [
     name: "Red Velvet Tubcake",
     price: 160,
     category: "Tubcakes",
-    image: "/placeholder.svg?height=200&width=200",
+    image: "/rvtc.jpeg",
     description: "Classic red velvet in our signature tube shape",
   },
   {
@@ -55,7 +55,7 @@ const desserts = [
     name: "Blueberry Cheesecake",
     price: 190,
     category: "Cheesecakes",
-    image: "/placeholder.svg?height=200&width=200",
+    image: "/bc.jpeg",
     description: "Smooth cheesecake topped with fresh blueberries",
   },
   {
@@ -63,7 +63,7 @@ const desserts = [
     name: "Caramel Bomboloni",
     price: 130,
     category: "Bombolonis",
-    image: "/placeholder.svg?height=200&width=200",
+    image: "/cb.jpeg",
     description: "Sweet bomboloni filled with salted caramel",
   },
   {
@@ -71,7 +71,7 @@ const desserts = [
     name: "Vanilla Tubcake",
     price: 140,
     category: "Tubcakes",
-    image: "/placeholder.svg?height=200&width=200",
+    image: "/ctc.jpeg",
     description: "Classic vanilla cake with smooth frosting",
   },
 ]
