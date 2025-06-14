@@ -117,126 +117,170 @@ export default function HomePage() {
       </header>
 
       {/* Hero Section */}
-      <section className="relative z-20 text-center pt-10 pb-12 px-6">
+      <section className="relative z-20 text-center py-8 sm:py-12 md:py-16 px-4 sm:px-6">
         <motion.div
           initial={{ scale: 0.9, opacity: 0 }}
           animate={{ scale: 1, opacity: 1 }}
           transition={{ duration: 1.2, ease: "easeOut" }}
-          className="hero-gradient p-6 sm:p-8 md:p-12 max-w-4xl mx-auto float-animation"
+          className="max-w-6xl mx-auto"
         >
-          {/* Main Title */}
-          <motion.h1
+          {/* Main Hero Card */}
+          <motion.div
             initial={{ y: 50, opacity: 0 }}
             animate={{ y: 0, opacity: 1 }}
             transition={{ delay: 0.3, duration: 1, ease: "easeOut" }}
-            className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl heading-primary text-accent main-heading-glow mb-8"
+            className="hero-gradient p-6 sm:p-8 md:p-12 mb-8 float-animation"
           >
-            DOUGHNIVERSE
-          </motion.h1>
+            {/* Main Title */}
+            <motion.h1
+              initial={{ y: 30, opacity: 0 }}
+              animate={{ y: 0, opacity: 1 }}
+              transition={{ delay: 0.5, duration: 1, ease: "easeOut" }}
+              className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl heading-primary text-accent main-heading-glow mb-4"
+            >
+              DOUGHNIVERSE
+            </motion.h1>
 
-          {/* Tagline */}
-          <motion.div
-            initial={{ y: 30, opacity: 0 }}
-            animate={{ y: 0, opacity: 1 }}
-            transition={{ delay: 0.6, duration: 0.8, ease: "easeOut" }}
-            className="mb-8"
-          >
-            <div className="flex flex-wrap justify-center gap-3 sm:gap-4 md:gap-6 mb-6">
+            {/* Subtitle */}
+            <motion.p
+              initial={{ y: 20, opacity: 0 }}
+              animate={{ y: 0, opacity: 1 }}
+              transition={{ delay: 0.7, duration: 0.8, ease: "easeOut" }}
+              className="text-lg sm:text-xl md:text-2xl text-accent-script mb-8 px-4"
+            >
+              Where Every Bite is a Sweet Adventure
+            </motion.p>
+
+            {/* Tagline Boxes */}
+            <motion.div
+              initial={{ y: 30, opacity: 0 }}
+              animate={{ y: 0, opacity: 1 }}
+              transition={{ delay: 0.9, duration: 0.8, ease: "easeOut" }}
+              className="flex flex-wrap justify-center gap-3 sm:gap-4 md:gap-6 mb-8"
+            >
               {["Eggless", "Exclusive", "Epic"].map((word, index) => (
                 <motion.div
                   key={word}
                   initial={{ scale: 0, rotate: -180 }}
                   animate={{ scale: 1, rotate: 0 }}
                   transition={{
-                    delay: 0.9 + index * 0.2,
+                    delay: 1.1 + index * 0.2,
                     type: "spring",
                     stiffness: 200,
                   }}
                   whileHover={{ scale: 1.05, rotate: 2 }}
-                  className="bg-[var(--cream-yellow)] px-4 sm:px-6 md:px-8 py-2 sm:py-3 md:py-4 font-poppins font-black text-base sm:text-lg md:text-xl text-[var(--dark-charcoal)] transform rotate-1 group-hover:rotate-0 transition-all duration-300 shadow-[4px_4px_0px_var(--olive-green)] sm:shadow-[6px_6px_0px_var(--olive-green)] group-hover:shadow-[6px_6px_0px_var(--olive-green)] sm:group-hover:shadow-[8px_8px_0px_var(--olive-green)]"
+                  className="relative group cursor-pointer"
                 >
-                  {word}
-                  <div className="absolute inset-0 px-4 sm:px-6 md:px-8 py-2 sm:py-3 md:py-4 -z-10 transform translate-x-1 translate-y-1"></div>
+                  <div className="bg-[var(--cream-yellow)] border-2 sm:border-4 border-[var(--dark-charcoal)] px-4 sm:px-6 md:px-8 py-2 sm:py-3 md:py-4 font-poppins font-black text-base sm:text-lg md:text-xl text-[var(--dark-charcoal)] transform rotate-1 group-hover:rotate-0 transition-all duration-300 shadow-[4px_4px_0px_var(--olive-green)] sm:shadow-[6px_6px_0px_var(--olive-green)] group-hover:shadow-[6px_6px_0px_var(--olive-green)] sm:group-hover:shadow-[8px_8px_0px_var(--olive-green)]">
+                    {word}
+                  </div>
+                  <div className="absolute inset-0 bg-[var(--olive-green)] border-2 sm:border-4 border-[var(--dark-charcoal)] px-4 sm:px-6 md:px-8 py-2 sm:py-3 md:py-4 -z-10 transform translate-x-1 translate-y-1"></div>
                 </motion.div>
               ))}
-            </div>
-            <motion.p
-              initial={{ y: 20, opacity: 0 }}
+            </motion.div>
+
+            {/* Special Notice */}
+            <motion.div
+              initial={{ y: 30, opacity: 0 }}
               animate={{ y: 0, opacity: 1 }}
-              transition={{ delay: 1.5, duration: 0.8, ease: "easeOut" }}
-              className="text-lg sm:text-xl text-primary text-accent-script px-4"
+              transition={{ delay: 1.7, duration: 0.8, ease: "easeOut" }}
+              whileHover={{ scale: 1.02 }}
+              className="bg-gradient-to-r from-[var(--cream-yellow)] to-[var(--pale-yellow)] p-4 sm:p-6 rounded-lg border-2 border-[var(--dark-charcoal)] max-w-md mx-auto mb-8"
+              style={{ boxShadow: "3px 3px 0px var(--olive-green)" }}
             >
-              Crafting Sweet Memories, One Bite at a Time
-            </motion.p>
+              <h3 className="font-poppins text-lg sm:text-xl text-[var(--dark-charcoal)] font-bold mb-2">
+                🚫 No Store • 📱 Not On Apps
+              </h3>
+              <p className="font-poppins text-[var(--dark-charcoal)] font-medium text-sm sm:text-base">
+                WhatsApp Orders Only!
+              </p>
+              <p className="font-poppins text-[var(--dark-charcoal)] text-sm sm:text-base">
+                🚚 Delivery • 🏪 Takeaway Available
+              </p>
+            </motion.div>
           </motion.div>
 
           {/* Info Grid */}
           <motion.div
-            initial={{ y: 30, opacity: 0 }}
+            initial={{ y: 50, opacity: 0 }}
             animate={{ y: 0, opacity: 1 }}
-            transition={{ delay: 1.8, duration: 0.8, ease: "easeOut" }}
-            className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-8"
+            transition={{ delay: 1.9, duration: 0.8, ease: "easeOut" }}
+            className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-6 mb-8"
           >
-            <motion.div
-              className="modern-card p-6 text-center group"
-              whileHover={{ y: -5, scale: 1.02 }}
-              transition={{ type: "spring", stiffness: 300, damping: 20 }}
-            >
+            {[
+              {
+                icon: MapPin,
+                title: "Location",
+                info: "Varanasi, UP",
+                description: "Serving the holy city",
+                color: "from-blue-500 to-blue-600",
+              },
+              {
+                icon: Clock,
+                title: "Hours",
+                info: "11AM – 9PM",
+                description: "Daily service",
+                color: "from-green-500 to-green-600",
+              },
+              {
+                icon: MessageSquare,
+                title: "Orders",
+                info: "WhatsApp Only",
+                description: "Quick & easy ordering",
+                color: "from-purple-500 to-purple-600",
+              },
+            ].map((item, index) => (
               <motion.div
-                className="w-12 h-12 bg-gradient-to-br from-[var(--olive-green)] to-[var(--dark-charcoal)] rounded-full flex items-center justify-center mx-auto mb-3 border-2 border-[var(--medium-gray)]"
-                whileHover={{ rotate: 360, scale: 1.1 }}
-                transition={{ duration: 0.6 }}
+                key={item.title}
+                initial={{ y: 30, opacity: 0, scale: 0.9 }}
+                animate={{ y: 0, opacity: 1, scale: 1 }}
+                transition={{ delay: 2.1 + index * 0.1, duration: 0.6, ease: "easeOut" }}
+                whileHover={{ y: -5, scale: 1.02 }}
+                className="modern-card p-4 sm:p-6 text-center group"
               >
-                <MapPin className="w-6 h-6 text-white" />
+                <motion.div
+                  className={`w-12 h-12 bg-gradient-to-br ${item.color} rounded-full flex items-center justify-center mx-auto mb-3 border-2 border-white shadow-lg`}
+                  whileHover={{ rotate: 360, scale: 1.1 }}
+                  transition={{ duration: 0.6 }}
+                >
+                  <item.icon className="w-6 h-6 text-white" />
+                </motion.div>
+                <h3 className="font-poppins font-bold text-accent text-base sm:text-lg mb-1">{item.title}</h3>
+                <p className="text-body text-primary font-semibold text-sm sm:text-base mb-1">{item.info}</p>
+                <p className="text-body text-secondary text-xs sm:text-sm">{item.description}</p>
               </motion.div>
-              <h3 className="font-poppins font-bold text-accent text-lg mb-2">Location</h3>
-              <p className="text-body text-secondary font-medium">Varanasi, UP</p>
-            </motion.div>
-
-            <motion.div
-              className="modern-card p-6 text-center group"
-              whileHover={{ y: -5, scale: 1.02 }}
-              transition={{ type: "spring", stiffness: 300, damping: 20 }}
-            >
-              <motion.div
-                className="w-12 h-12 bg-gradient-to-br from-[var(--olive-green)] to-[var(--dark-charcoal)] rounded-full flex items-center justify-center mx-auto mb-3 border-2 border-[var(--medium-gray)]"
-                whileHover={{ rotate: 360, scale: 1.1 }}
-                transition={{ duration: 0.6 }}
-              >
-                <Clock className="w-6 h-6 text-white" />
-              </motion.div>
-              <h3 className="font-poppins font-bold text-accent text-lg mb-2">Hours</h3>
-              <p className="text-body text-secondary font-medium">11AM – 9PM</p>
-            </motion.div>
-
-            <motion.div
-              className="modern-card p-6 text-center group"
-              whileHover={{ y: -5, scale: 1.02 }}
-              transition={{ type: "spring", stiffness: 300, damping: 20 }}
-            >
-              <motion.div
-                className="w-12 h-12 bg-gradient-to-br from-[var(--olive-green)] to-[var(--dark-charcoal)] rounded-full flex items-center justify-center mx-auto mb-3 border-2 border-[var(--medium-gray)]"
-                whileHover={{ rotate: 360, scale: 1.1 }}
-                transition={{ duration: 0.6 }}
-              >
-                <MessageSquare className="w-6 h-6 text-white" />
-              </motion.div>
-              <h3 className="font-poppins font-bold text-accent text-lg mb-2">Orders</h3>
-              <p className="text-body text-secondary font-medium">WhatsApp Only</p>
-            </motion.div>
+            ))}
           </motion.div>
 
-          {/* Special Notice */}
+          {/* Call to Action */}
           <motion.div
             initial={{ y: 30, opacity: 0 }}
             animate={{ y: 0, opacity: 1 }}
-            transition={{ delay: 2.1, duration: 0.8, ease: "easeOut" }}
-            whileHover={{ scale: 1.02 }}
-            className="bg-gradient-to-r from-[var(--cream-yellow)] to-[var(--pale-yellow)] p-6 rounded-lg border-2 border-[var(--dark-charcoal)] box-shadow: 3px 3px 0px var(--olive-green) max-w-md mx-auto"
+            transition={{ delay: 2.5, duration: 0.8, ease: "easeOut" }}
+            className="text-center"
           >
-            <h3 className="font-poppins text-xl text-[var(--dark-charcoal)] font-bold mb-2">No Store • Not On Apps</h3>
-            <p className="font-poppins text-[var(--dark-charcoal)] font-medium">WhatsApp Orders Only!</p>
-            <p className="font-poppins text-[var(--dark-charcoal)]">Delivery/Takeaway Available</p>
+            <motion.button
+              whileHover={{ scale: 1.05, y: -2 }}
+              whileTap={{ scale: 0.95 }}
+              onClick={() => {
+                const message =
+                  "Hi! I'm interested in Doughniverse desserts. Could you please share more details about your menu and ordering process? 🍩"
+                window.open(`https://wa.me/919559545103?text=${encodeURIComponent(message)}`, "_blank")
+              }}
+              className="bg-green-500 hover:bg-green-600 text-white px-6 sm:px-8 py-3 sm:py-4 rounded-lg font-poppins font-bold text-base sm:text-lg flex items-center justify-center space-x-3 mx-auto smooth-transition border-2 border-green-600 shadow-lg"
+              style={{ boxShadow: "3px 3px 0px #22c55e" }}
+            >
+              <WhatsAppIcon />
+              <span>Order Now on WhatsApp</span>
+            </motion.button>
+            <motion.p
+              initial={{ opacity: 0 }}
+              animate={{ opacity: 1 }}
+              transition={{ delay: 2.7, duration: 0.6 }}
+              className="text-secondary text-sm mt-3"
+            >
+              🍩 Crafting Sweet Memories, One Bite at a Time
+            </motion.p>
           </motion.div>
         </motion.div>
       </section>
