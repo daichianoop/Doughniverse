@@ -156,7 +156,7 @@ export default function HomePage() {
                   className="bg-[var(--cream-yellow)] px-4 sm:px-6 md:px-8 py-2 sm:py-3 md:py-4 font-poppins font-black text-base sm:text-lg md:text-xl text-[var(--dark-charcoal)] transform rotate-1 group-hover:rotate-0 transition-all duration-300 shadow-[4px_4px_0px_var(--olive-green)] sm:shadow-[6px_6px_0px_var(--olive-green)] group-hover:shadow-[6px_6px_0px_var(--olive-green)] sm:group-hover:shadow-[8px_8px_0px_var(--olive-green)]"
                 >
                   {word}
-                  <div className="absolute inset-0  border-2 sm:border-4 border-[var(--dark-charcoal)] px-4 sm:px-6 md:px-8 py-2 sm:py-3 md:py-4 -z-10 transform translate-x-1 translate-y-1"></div>
+                  <div className="absolute inset-0 px-4 sm:px-6 md:px-8 py-2 sm:py-3 md:py-4 -z-10 transform translate-x-1 translate-y-1"></div>
                 </motion.div>
               ))}
             </div>
