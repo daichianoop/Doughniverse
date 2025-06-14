@@ -105,40 +105,44 @@ export function CartSidebar() {
                   <div className="space-y-4 mb-6">
                     {state.items.map((item) => (
                       <motion.div key={item.id} layout className="modern-card p-4">
-                        <div className="flex items-center space-x-4">
-                          <img
-                            src={item.image || "/placeholder.svg"}
-                            alt={item.name}
-                            className="w-16 h-16 rounded-lg object-cover"
-                          />
-                          <div className="flex-1 min-w-0">
-                            <h3 className="font-poppins font-semibold text-[var(--dark-charcoal)] truncate">
-                              {item.name}
-                            </h3>
-                            <p className="text-[var(--olive-green)] font-poppins">₹{item.price.toFixed(2)}</p>
+                        <div className="space-y-3">
+                          <div className="flex items-start space-x-3">
+                            <img
+                              src={item.image || "/placeholder.svg"}
+                              alt={item.name}
+                              className="w-12 h-12 sm:w-16 sm:h-16 rounded-lg object-cover flex-shrink-0"
+                            />
+                            <div className="flex-1 min-w-0">
+                              <h3 className="font-poppins font-semibold text-[var(--dark-charcoal)] text-sm sm:text-base leading-tight mb-1">
+                                {item.name}
+                              </h3>
+                              <p className="text-[var(--olive-green)] font-poppins text-sm">₹{item.price.toFixed(2)}</p>
+                            </div>
                           </div>
-                          <div className="flex items-center space-x-2">
-                            <motion.button
-                              whileTap={{ scale: 0.9 }}
-                              onClick={() => updateQuantity(item.id, item.quantity - 1)}
-                              className="p-1 rounded-full bg-[var(--olive-green)] text-white hover:bg-[var(--dark-charcoal)] transition-colors"
-                            >
-                              <Minus className="w-4 h-4" />
-                            </motion.button>
-                            <span className="font-poppins font-bold text-[var(--dark-charcoal)] w-8 text-center">
-                              {item.quantity}
-                            </span>
-                            <motion.button
-                              whileTap={{ scale: 0.9 }}
-                              onClick={() => updateQuantity(item.id, item.quantity + 1)}
-                              className="p-1 rounded-full bg-[var(--olive-green)] text-white hover:bg-[var(--dark-charcoal)] transition-colors"
-                            >
-                              <Plus className="w-4 h-4" />
-                            </motion.button>
+                          <div className="flex items-center justify-between">
+                            <div className="flex items-center space-x-2">
+                              <motion.button
+                                whileTap={{ scale: 0.9 }}
+                                onClick={() => updateQuantity(item.id, item.quantity - 1)}
+                                className="p-1 rounded-full bg-[var(--olive-green)] text-white hover:bg-[var(--dark-charcoal)] transition-colors"
+                              >
+                                <Minus className="w-4 h-4" />
+                              </motion.button>
+                              <span className="font-poppins font-bold text-[var(--dark-charcoal)] w-8 text-center">
+                                {item.quantity}
+                              </span>
+                              <motion.button
+                                whileTap={{ scale: 0.9 }}
+                                onClick={() => updateQuantity(item.id, item.quantity + 1)}
+                                className="p-1 rounded-full bg-[var(--olive-green)] text-white hover:bg-[var(--dark-charcoal)] transition-colors"
+                              >
+                                <Plus className="w-4 h-4" />
+                              </motion.button>
+                            </div>
                             <motion.button
                               whileTap={{ scale: 0.9 }}
                               onClick={() => removeItem(item.id)}
-                              className="p-1 rounded-full bg-red-500 text-white hover:bg-red-600 transition-colors ml-2"
+                              className="p-2 rounded-full bg-red-500 text-white hover:bg-red-600 transition-colors"
                             >
                               <Trash2 className="w-4 h-4" />
                             </motion.button>
