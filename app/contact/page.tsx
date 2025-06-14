@@ -1,5 +1,5 @@
 "use client"
-
+import Image from"next/image"
 import { motion } from "framer-motion"
 import { MapPin, Clock, Phone, MessageCircle } from "lucide-react"
 import { BottomNavbar } from "@/components/bottom-navbar"
@@ -37,15 +37,10 @@ export default function ContactPage() {
           transition={{ duration: 0.8, ease: "easeOut" }}
           className="flex items-center space-x-3"
         >
-          <motion.div
-            className="w-12 h-12 bg-gradient-to-br from-[var(--olive-green)] to-[var(--dark-charcoal)] rounded-full flex items-center justify-center text-2xl border-2 border-[var(--medium-gray)] pulse-glow"
-            whileHover={{ rotate: 360 }}
-            transition={{ duration: 0.6 }}
-          >
-            🍩
-          </motion.div>
+                  <Image src="/dlogo.jpg" alt="logo" width={100} height={100} ></Image>
+
           <div>
-            <h1 className="font-dancing text-2xl text-accent main-heading-glow">Doughniverse</h1>
+            <h1 className="font-dancing text-2xl text-accent main-heading-glow">Dessert Shop</h1>
             <p className="text-body text-sm text-secondary">Contact Us</p>
           </div>
         </motion.div>
